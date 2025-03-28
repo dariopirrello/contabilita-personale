@@ -31,6 +31,7 @@ export class LoginComponent {
         (response) => {
           console.log('Risposta API:', response);
           localStorage.setItem('token', response.token);
+          alert(response.token);
           this.router.navigate(['/dashboard']);
         },
         (error) => {
